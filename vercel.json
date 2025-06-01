@@ -1,14 +1,15 @@
 {
     "version": 2,
-    "functions": {
-        "api/chatbot.ts": {
-            "runtime": "nodejs18.x",
-            "maxDuration": 10
+    "builds": [
+        {
+            "src": "api/chatbot.ts",
+            "use": "@vercel/node"
         }
-    },
+    ],
     "routes": [
         {
-            "src": "/api/chatbot",
+            "src": "/api/(.*)",
+            "dest": "/api/chatbot.ts",
             "methods": [
                 "POST",
                 "OPTIONS"
@@ -17,8 +18,7 @@
                 "Access-Control-Allow-Origin": "https://gs926.com.ar",
                 "Access-Control-Allow-Methods": "POST, OPTIONS",
                 "Access-Control-Allow-Headers": "Content-Type"
-            },
-            "dest": "/api/chatbot.ts"
+            }
         }
     ]
 }
