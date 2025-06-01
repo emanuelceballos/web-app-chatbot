@@ -2,7 +2,7 @@
     "version": 2,
     "functions": {
         "api/chatbot.ts": {
-            "runtime": "vercel/node@20.x",
+            "runtime": "node@22.x",
             "maxDuration": 10
         }
     },
