@@ -12,7 +12,7 @@ export default async (request: VercelRequest, response: VercelResponse) => {
     }
   
     try {
-      const response = await fetch('https://api.openai.com/v1/chat/completions', {
+      const chatResponse = await fetch('https://api.openai.com/v1/chat/completions', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -46,10 +46,10 @@ Siempre respondé en español neutro. Prioritizá siempre la información cargad
         }),
       });
   
-      const data = await response.json();
+      const data = await chatResponse.json();
       const reply = data.choices?.[0]?.message?.content || 'No se obtuvo respuesta.';
   
-      response.status(200).json({ reply });
+      return response.status(200).json({ reply });
     } catch (err) {
       console.error('Error:', err);
       return response.status(500).json({ reply: 'Ocurrió un error al procesar la solicitud.' });
