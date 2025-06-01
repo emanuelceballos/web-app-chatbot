@@ -1,10 +1,6 @@
 import { VercelRequest, VercelResponse } from '@vercel/node';
 
 export default async (request: VercelRequest, response: VercelResponse) => {
-
-    console.log(`🧉 ---------------------------🧉`);
-    console.log(`🧉 → :5 → request:`, request);
-    console.log(`🧉 ---------------------------🧉`);
     if (request.method !== 'POST' && request.method !== 'OPTIONS') {
       return response.status(405).send('Sólo se permiten solicitudes POST');
     }
@@ -51,6 +47,10 @@ Siempre respondé en español neutro. Prioritizá siempre la información cargad
       });
   
       const data = await chatResponse.json();
+
+      console.log(`🧉 ----------------------🧉`);
+      console.log(`🧉 → :51 → data:`, data);
+      console.log(`🧉 ----------------------🧉`);
       const reply = data.choices?.[0]?.message?.content || 'No se obtuvo respuesta.';
   
       return response.status(200).json({ reply });
