@@ -2,7 +2,7 @@
     "version": 2,
     "functions": {
         "api/chatbot.ts": {
-            "runtime": "node@22.x",
+            "runtime": "nodejs18.x",
             "maxDuration": 10
         }
     },
