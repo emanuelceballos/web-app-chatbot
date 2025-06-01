@@ -1,0 +1,26 @@
+{
+  "name": "info-web-chatbot",
+  "version": "1.0.0",
+  "main": "api/chatbot.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emanuelceballos/web-app-chatbot.git"
+  },
+  "keywords": [
+    "chatbot",
+    "ai"
+  ],
+  "author": "Emanuel Ceballos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emanuelceballos/web-app-chatbot/issues"
+  },
+  "homepage": "https://github.com/emanuelceballos/web-app-chatbot#readme",
+  "description": "",
+  "dependencies": {
+    "@vercel/node": "^5.2.1"
+  }
+}

@@ -1,8 +1,8 @@
 {
     "version": 2,
     "functions": {
-        "api/chatbot.js": {
-            "runtime": "nodejs20.x",
+        "api/chatbot.ts": {
+            "runtime": "vercel/node@20.x",
             "maxDuration": 10
         }
     },
@@ -18,7 +18,7 @@
                 "Access-Control-Allow-Methods": "POST, OPTIONS",
                 "Access-Control-Allow-Headers": "Content-Type"
             },
-            "dest": "/api/chatbot.js"
+            "dest": "/api/chatbot.ts"
         }
     ]
 }
