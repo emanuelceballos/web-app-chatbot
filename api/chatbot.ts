@@ -1,6 +1,10 @@
 import { VercelRequest, VercelResponse } from '@vercel/node';
 
 export default async (request: VercelRequest, response: VercelResponse) => {
+
+    console.log(`🧉 ---------------------------🧉`);
+    console.log(`🧉 → :5 → request:`, request);
+    console.log(`🧉 ---------------------------🧉`);
     if (request.method !== 'POST' && request.method !== 'OPTIONS') {
       return response.status(405).send('Sólo se permiten solicitudes POST');
     }

@@ -8,16 +8,16 @@
     ],
     "routes": [
         {
-            "src": "/api/(.*)",
+            "src": "/(.*)",
             "dest": "/api/chatbot.ts",
             "methods": [
                 "POST",
                 "OPTIONS"
             ],
             "headers": {
-                "Access-Control-Allow-Origin": "https://gs926.com.ar",
+                "Access-Control-Allow-Origin": "*",
                 "Access-Control-Allow-Methods": "POST, OPTIONS",
-                "Access-Control-Allow-Headers": "Content-Type"
+                "Access-Control-Allow-Headers": "*"
             }
         }
     ]
